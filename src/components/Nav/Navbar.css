@@ -1,0 +1,134 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    z-index: 100;
+}
+.logo{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.logo>img{
+    width: 150px;
+    cursor: pointer;
+}
+.links>ul{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+
+}
+.links>ul>li{
+    list-style: none;
+}
+.links>ul>li>a{
+        text-decoration: none;
+        transition: 0.3 all;
+        color: black;
+
+}
+
+.links>ul>li>a:hover{
+    color: #FDC93B;
+}
+nav>.links{
+    padding:.5rem;
+}
+nav>div>i{
+    padding: 10px 20px ;
+    transition: transform 0.3s ease-in-out;
+}
+.mobile-menu i.fa-xmark {
+    transform: rotate(180deg);
+}
+.mobile-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+    
+}
+.mobile-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.mobile-menu.is-open .mobile-links {
+    animation: open-menu 0.3s forwards;
+}
+
+.mobile-menu:not(.is-open) .mobile-links {
+    animation: close-menu 0.3s forwards;
+}
+
+@keyframes open-menu {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes close-menu {
+    0% {
+        transform: scaleY(1);
+    }
+    100% {
+        transform: scaleY(0);
+    }
+}
+.mobile-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-links li {
+    margin-bottom: 1rem;
+}
+
+.mobile-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+.mobile-links button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+nav>.links>ul>li>button{
+    padding: 8px 12px;
+    box-sizing: border-box;
+    color: white;
+    background-color: orange;
+    text-align: center;
+    font-family: Roboto;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    transition: 0.3s all ease-in;
+}
+nav>.links>ul>li>button:hover{
+    background-color: #FDC93B;
+    color: black;
+}
